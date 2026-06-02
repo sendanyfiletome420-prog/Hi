@@ -9,7 +9,7 @@ async def main(message: cl.Message):
         response = requests.post(
             API_URL,
             json={"text": message.content},
-            timeout=120
+            timeout=1200
         )
         result = response.json()
         output = result.get("response", "No response from model")
